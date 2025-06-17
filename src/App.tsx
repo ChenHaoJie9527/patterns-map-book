@@ -1,35 +1,27 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import { SidebarLayout } from "./components/ui/layout"
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
+    <SidebarLayout
+      sidebar={
+        <div className="p-4">
+          <h2 className="text-xl font-bold mb-4">侧边栏</h2>
+          <nav className="space-y-2">
+            <a href="#" className="block p-2 hover:bg-gray-100 rounded">菜单项 1</a>
+            <a href="#" className="block p-2 hover:bg-gray-100 rounded">菜单项 2</a>
+            <a href="#" className="block p-2 hover:bg-gray-100 rounded">菜单项 3</a>
+          </nav>
+        </div>
+      }
+    >
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
+        <h1 className="text-2xl font-bold mb-6">主要内容区</h1>
+        <p className="text-gray-600">
+          这是主要内容区域。您可以在这里放置任何内容。
         </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  );
+    </SidebarLayout>
+  )
 }
 
 export default App;
