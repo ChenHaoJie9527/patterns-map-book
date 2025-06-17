@@ -1,4 +1,4 @@
-import { SidebarLayout } from "./components/ui/layout"
+import { SidebarLayout } from "./components/layout"
 
 function App() {
   return (
