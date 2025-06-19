@@ -20,7 +20,12 @@
 		]
 	},
 	"formatter": {
-		"enabled": true
+		"enabled": true,
+		"formatWithErrors": false,
+		"indentStyle": "space",
+		"indentWidth": 2,
+		"lineWidth": 80,
+		"lineEnding": "lf"
 	},
 	"organizeImports": {
 		"enabled": true,
@@ -145,5 +150,12 @@
 				}
 			}
 		}
-	]
+	],
+	"javascript": {
+		"formatter": {
+			"quoteStyle": "double",
+			"trailingComma": "all",
+			"semicolons": "always"
+		}
+	}
 }
