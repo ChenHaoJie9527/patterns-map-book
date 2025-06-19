@@ -1,8 +1,8 @@
 import { createRoot } from "react-dom/client";
 import "./index.css";
+import { StrictMode } from "react";
 import App from "./App.tsx";
 import { OrderManager, OrderManagerV2, placeOrderCommand } from "./patterns";
-import { StrictMode } from "react";
 
 // const orderManager = new OrderManager();
 
@@ -17,5 +17,5 @@ console.log(orderManager.execute(placeOrderCommand("美式咖啡", 1001)));
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <App />
-  </StrictMode>
+  </StrictMode>,
 );

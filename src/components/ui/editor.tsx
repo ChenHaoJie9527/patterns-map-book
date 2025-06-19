@@ -1,7 +1,7 @@
 import {
+  DeleteTextCommand,
   Editor,
   InsertTextCommand,
-  DeleteTextCommand,
   SetSelectionCommand,
 } from "@/patterns/editor-pattern";
 import * as React from "react";
@@ -36,8 +36,8 @@ export function TextEditor() {
       new SetSelectionCommand(
         editor,
         target.selectionStart,
-        target.selectionEnd
-      )
+        target.selectionEnd,
+      ),
     );
   };
 

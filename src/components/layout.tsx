@@ -1,10 +1,10 @@
-import * as React from "react"
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
+import type * as React from "react";
 
 interface SidebarLayoutProps extends React.HTMLAttributes<HTMLDivElement> {
-  sidebar: React.ReactNode
-  children: React.ReactNode
-  sidebarWidth?: string
+  sidebar: React.ReactNode;
+  children: React.ReactNode;
+  sidebarWidth?: string;
 }
 
 export function SidebarLayout({
@@ -29,10 +29,8 @@ export function SidebarLayout({
 
       {/* 主内容区 */}
       <main className="flex-1 overflow-auto">
-        <div className="h-full w-full p-6">
-          {children}
-        </div>
+        <div className="h-full w-full p-6">{children}</div>
       </main>
     </div>
-  )
-} 
+  );
+}
